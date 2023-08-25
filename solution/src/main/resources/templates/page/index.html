@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default_layout}"
+>
+	<th:block layout:fragment="meta">
+		<title></title>
+	</th:block>
+	
+	<th:block layout:fragment="css">
+	</th:block>
+	
+	<th:block layout:fragment="content">
+		<div class="container-fluid text-center">
+			<div id="main-wrap"></div>
+		</div>
+	</th:block>
+	
+	<th:block layout:fragment="script">
+<!-- 		<script type="text/javascript" th:src="@{/js/script.js}"></script> -->
+	</th:block>
+</html>

@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.7-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.mplanit.solution'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+dependencies {
+  // thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+  implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	// lombok
+	annotationProcessor 'org.projectlombok:lombok'
+  
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	// implementation 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+bootJar {
+  baseName = 'mplanit'
+  version =  '0.0.1'
+}
+// PowerShell => .\gradlew bootJar
+// Mac/Linux => ./gradlew bootJar
+// Permission denied error => 1. chmod +x ./gradlew 2./gradlew bootJar or gradle build
+
+// Server exit => Ctrl + C
+// All kill => killall -9 java

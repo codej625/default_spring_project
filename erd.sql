@@ -1,0 +1,43 @@
+CREATE TABLE "record" (
+  "id" SERIAL NOT NULL ,
+  "req_time" TIMESTAMP DEFAULT NULL,
+  "ip" VARCHAR DEFAULT NULL,
+  "device" VARCHAR DEFAULT NULL,
+  "adv_object_code" VARCHAR DEFAULT NULL,
+  "adv_object_name" VARCHAR DEFAULT NULL,
+  "adv_subject_id" VARCHAR DEFAULT NULL,
+  "source_code" VARCHAR DEFAULT NULL,
+  "medium_code" VARCHAR DEFAULT NULL,
+  "campaign_code" VARCHAR DEFAULT NULL,
+  "contents_code" VARCHAR DEFAULT NULL,
+  "term_code" VARCHAR DEFAULT NULL,
+  "name" VARCHAR DEFAULT NULL,
+  "birthday" VARCHAR DEFAULT NULL,
+  "gender" VARCHAR DEFAULT NULL,
+  "mobile" VARCHAR DEFAULT NULL,
+  "conversion_type" VARCHAR DEFAULT NULL,
+  "visit_log_id" INTEGER DEFAULT NULL,
+  "visit_time" TIMESTAMP DEFAULT NULL,
+  "duplicate_flag" VARCHAR DEFAULT NULL,
+  "insu_price" VARCHAR DEFAULT NULL,
+  "agree_check" INTEGER DEFAULT NULL,
+  "spare_1" VARCHAR DEFAULT NULL,
+  "spare_2" VARCHAR DEFAULT NULL,
+  "spare_3" INTEGER DEFAULT NULL
+);
+
+CREATE TABLE "visit" (
+  "id" SERIAL NOT NULL,
+  "visit_time" TIMESTAMP DEFAULT NULL,
+  "ip" VARCHAR DEFAULT NULL,
+  "device" VARCHAR DEFAULT NULL,
+  "source_code" VARCHAR DEFAULT NULL,
+  "medium_code" VARCHAR DEFAULT NULL,
+  "campaign_code" VARCHAR DEFAULT NULL,
+  "contents_code" VARCHAR DEFAULT NULL,
+  "term_code" VARCHAR DEFAULT NULL,
+  "adv_object_code" VARCHAR DEFAULT NULL,
+  "adv_object_name" VARCHAR DEFAULT NULL,
+  "adv_subject_id" VARCHAR DEFAULT NULL,
+  "url" VARCHAR DEFAULT NULL
+);

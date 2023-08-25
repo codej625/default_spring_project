@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html 
+	lagn="ko" 
+	xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+		<!-- common config start -->
+		<!-- <head> -->
+		<th:block th:replace="fragments/config :: configFragment"></th:block>
+		<!-- </head> -->
+		<!-- common config end -->
+	<body>
+		<!-- common header fragment -->
+		<th:block th:replace="fragments/header :: headerFragment"></th:block>
+		<!-- content fragment -->
+		<th:block layout:fragment="content"></th:block>
+		
+		<!-- common js start -->
+  	<th:block th:replace="fragments/script :: commonScript"></th:block>
+  	<!-- common js end -->
+  	
+		<!-- js start -->
+  	<th:block layout:fragment="script"></th:block>
+  	<!-- js end -->
+  	
+		<!-- footer fragment -->
+		<footer th:replace="fragments/footer :: footerFragment"></footer>
+	</body>
+</html>

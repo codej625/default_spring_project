@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ >
+	<th:block th:fragment="configFragment">
+		<!-- common meta tag start -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+		<!-- common meta tag end -->
+
+		<!-- meta tag start -->
+		<th:block layout:fragment="meta"></th:block>
+		<!-- meta tag end -->
+		
+    <!-- common css start -->
+		<link rel="stylesheet" th:href="@{/css/main.css}">
+		<!-- common css end -->
+		
+		<!-- css start -->
+		<th:block layout:fragment="css"></th:block>
+		<!-- css end -->
+		
+  </th:block>
+</html>

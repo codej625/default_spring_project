@@ -1,0 +1,54 @@
+# =================================================================================== #
+## server port ##
+server:
+  port: 8080
+  
+# =================================================================================== #
+## mybatis ##
+mybatis:
+  ### package aliases set ###
+  type-aliases-package: com.mplanit.solution.utils.pagination
+                        , com.mplanit.solution.mapper
+                        , com.mplanit.solution.model
+  
+  ### mapper xml set ###
+  mapper-locations: mybatis/mapper/*.xml
+                    , mybatis/mapper/**/*.xml
+  
+# =================================================================================== #
+## project setting ##
+spring:
+  application:
+    name: solution
+  profiles:
+  # active: prod
+    active: local    
+    
+    
+# =================================================================================== #
+## view ##
+  thymeleaf:
+    cache: 'false'
+    enabled: 'true'
+    prefix: classpath:templates/
+    suffix: .html
+    
+# =================================================================================== #
+## datasource ##
+  sql:
+    init:
+      platform: postgresql
+  datasource:
+    password: '1007'
+    username: codej625
+    hikari:
+      maximum-pool-size: '4'
+    url: jdbc:postgresql://localhost:5432/mplanit_dev
+    
+# =================================================================================== #
+## devtools ##
+  devtools:
+    livereload:
+      enabled: 'true'
+      
+# =================================================================================== #

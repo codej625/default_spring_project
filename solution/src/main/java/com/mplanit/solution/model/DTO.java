@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Main {
+public class DTO {
 
 	private int map_seq; // 맵순번
 	private String product_seq; // 상품순번
